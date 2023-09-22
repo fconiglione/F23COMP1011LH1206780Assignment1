@@ -22,7 +22,8 @@ public class DBUtility {
             while (resultSet.next()) {
                 String language = resultSet.getString("language");
                 double popularity = resultSet.getDouble("popularity");
-
+//                System.out.println("Language: " + language);
+//                System.out.println("Popularity: " + popularity);
                 try{
                     Language programmingLanguage = new Language(language, popularity);
                     languages.add(programmingLanguage);
