@@ -5,10 +5,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -25,13 +29,33 @@ public class TableViewController implements Initializable {
     private TableColumn<Language, Double> popularityColumn;
 
     @FXML
-    void switchToGraphView() {
+    private Button tableViewButton;
 
+    @FXML
+    private Button graphViewButton;
+
+    @FXML
+    void switchToGraphView() {
+        try {
+            // Sourced from: https://stackoverflow.com/questions/34863425/javafx-scene-builder-how-switch-scene
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("graph-view.fxml"));
+            Parent graphViewRoot = loader.load();
+            graphViewButton.getScene().setRoot(graphViewRoot);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void switchToTableView() {
-
+        // Sourced from: https://stackoverflow.com/questions/34863425/javafx-scene-builder-how-switch-scene
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("table-view.fxml"));
+            Parent tableViewRoot = loader.load();
+            tableViewButton.getScene().setRoot(tableViewRoot);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

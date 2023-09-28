@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f23comp1011lh1206780assignment1.GraphViewController">
    <children>
       <VBox alignment="CENTER" layoutX="150.0" layoutY="42.0" prefHeight="800.0" prefWidth="1200.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -31,8 +30,8 @@
             </BarChart>
             <HBox alignment="CENTER" prefWidth="1058.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#switchToGraphView" text="Graph View" />
-                  <Button mnemonicParsing="false" onAction="#switchToTableView" text="Table View" />
+                  <Button fx:id="graphViewButton" mnemonicParsing="false" onAction="#switchToGraphView" text="Graph View" />
+                  <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#switchToTableView" text="Table View" />
                </children>
             </HBox>
          </children>
