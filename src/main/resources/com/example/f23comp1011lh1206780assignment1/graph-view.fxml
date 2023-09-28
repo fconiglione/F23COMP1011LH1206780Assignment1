@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f23comp1011lh1206780assignment1.GraphViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f23comp1011lh1206780assignment1.GraphViewController">
    <children>
       <VBox alignment="CENTER" layoutX="150.0" layoutY="42.0" prefHeight="800.0" prefWidth="1200.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,22 +23,33 @@
             </Label>
             <BarChart fx:id="barChart" legendVisible="false" prefHeight="600.0" prefWidth="1140.0">
               <xAxis>
-                <CategoryAxis prefHeight="58.0" prefWidth="662.0" side="BOTTOM" />
+                <CategoryAxis prefHeight="58.0" prefWidth="662.0" side="BOTTOM" tickLabelFill="WHITE">
+                     <tickLabelFont>
+                        <Font name="System Italic" size="8.0" />
+                     </tickLabelFont></CategoryAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis label="Popularity" prefHeight="312.0" prefWidth="77.0" side="LEFT" />
+                <NumberAxis label="Popularity" minorTickVisible="false" prefHeight="312.0" prefWidth="77.0" side="LEFT" tickLabelFill="WHITE" />
               </yAxis>
             </BarChart>
-            <HBox alignment="CENTER" prefWidth="1058.0" spacing="20.0">
+            <HBox alignment="CENTER_RIGHT" prefWidth="1058.0" spacing="20.0">
                <children>
                   <Button fx:id="graphViewButton" mnemonicParsing="false" onAction="#switchToGraphView" text="Graph View" />
                   <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#switchToTableView" text="Table View" />
                </children>
             </HBox>
+            <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Source: https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/" wrappingWidth="1289.6990966796875">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Text>
          </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
       </VBox>
    </children>
    <padding>
-      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+      <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
    </padding>
 </AnchorPane>

@@ -9,15 +9,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f23comp1011lh1206780assignment1.TableViewController">
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.f23comp1011lh1206780assignment1.TableViewController">
    <padding>
-      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+      <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
    </padding>
    <children>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="900.0" prefWidth="1217.4285714285713" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="1147.0" text="Most Popular Programming Languages in 2023" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="1352.0" text="Most Popular Programming Languages in 2023" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -31,13 +32,21 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <HBox alignment="CENTER" prefWidth="1058.0" spacing="20.0">
+            <HBox alignment="CENTER_RIGHT" prefWidth="1058.0" spacing="20.0">
                <children>
                   <Button fx:id="graphViewButton" mnemonicParsing="false" onAction="#switchToGraphView" text="Graph View" />
                   <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#switchToTableView" text="Table View" />
                </children>
             </HBox>
+            <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Source: https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/" wrappingWidth="1289.6990966796875">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Text>
          </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
       </VBox>
    </children>
 </AnchorPane>
