@@ -26,6 +26,10 @@ public class GraphViewController implements Initializable {
     @FXML
     private Button graphViewButton;
 
+    /**
+     * This method is actioned when the graphViewButton is clicked;
+     * it switches the view to the graph-view.fxml
+     */
     @FXML
     void switchToGraphView() {
         try {
@@ -37,7 +41,10 @@ public class GraphViewController implements Initializable {
             e.printStackTrace();
         }
     }
-
+    /**
+     * This method is actioned when the tableViewButton is clicked;
+     * it switches the view to the table-view.fxml
+     */
     @FXML
     void switchToTableView() {
         try {
@@ -50,6 +57,11 @@ public class GraphViewController implements Initializable {
         }
     }
 
+    /**
+     * This method adds all the data into the bar graph
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<Language> languages = DBUtility.getLanguages();

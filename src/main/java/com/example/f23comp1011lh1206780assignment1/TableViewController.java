@@ -34,6 +34,10 @@ public class TableViewController implements Initializable {
     @FXML
     private Button graphViewButton;
 
+    /**
+     * This method is actioned when the graphViewButton is clicked;
+     * it switches the view to the graph-view.fxml
+     */
     @FXML
     void switchToGraphView() {
         try {
@@ -46,6 +50,10 @@ public class TableViewController implements Initializable {
         }
     }
 
+    /**
+     * This method is actioned when the tableViewButton is clicked;
+     * it switches the view to the table-view.fxml
+     */
     @FXML
     void switchToTableView() {
         // Sourced from: https://stackoverflow.com/questions/34863425/javafx-scene-builder-how-switch-scene
@@ -58,6 +66,11 @@ public class TableViewController implements Initializable {
         }
     }
 
+    /**
+     * This method populates all the data into the tableView
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<Language> languages = DBUtility.getLanguages();

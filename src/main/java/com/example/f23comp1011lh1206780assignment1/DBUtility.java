@@ -10,6 +10,11 @@ public class DBUtility {
     private static String password = "fKlRR5oE_w";
     private static String connectUrl = "jdbc:mysql://172.31.22.43:3306/Francescolakfaconigl";
 
+    /**
+     * This method connects to the database and uses a series of try/catch blocks
+     * to return the data from the 'programming_languages' table
+     * @return
+     */
     public static ArrayList<Language> getLanguages() {
         ArrayList<Language> languages = new ArrayList<>();
 
@@ -22,6 +27,7 @@ public class DBUtility {
             while (resultSet.next()) {
                 String language = resultSet.getString("language");
                 double popularity = resultSet.getDouble("popularity");
+//                For initial testing purposes:
 //                System.out.println("Language: " + language);
 //                System.out.println("Popularity: " + popularity);
                 try{

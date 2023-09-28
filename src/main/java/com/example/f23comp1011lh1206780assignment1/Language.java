@@ -4,6 +4,11 @@ public class Language {
     private String language;
     private double popularity;
 
+    /**
+     * Constructor for the two attributes: language and popularity
+     * @param language
+     * @param popularity
+     */
     public Language(String language, double popularity) {
         setLanguage(language);
         setPopularity(popularity);
